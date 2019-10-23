@@ -37,16 +37,63 @@ li a:hover {
 .row {
   display: flex;
 }
+
 .menu {
   background-color: #636363;
+  height: 75vh;
 }
 
 .menu img{
   width: 100%;
-  height: 840px;
   opacity: 0.85;
+  height: 75vh;
+}
+
+.menu h2 {
+  position: relative;
+  margin: 0 auto;
+  color: white;
+  max-width: fit-content;
+  font-size: 5vw;
+  bottom: 49vh;
 }
 
 .col-1{
   width: 33.33%;
+}
+
+@media screen and (max-width:576px) {
+  .row {
+    display: block;
+  }
+  .col-1{
+    width: 100%;
+    height: 23vh;
+  }
+  .menu {
+    background-color: #636363;
+    height: auto;
+  }
+  .menu img{
+    width: 100%;
+    opacity: 0.85;
+    height: 23vh;
+  }
+  .menu h2 {
+    position: relative;
+    margin: 0 auto;
+    color: white;
+    max-width: fit-content;
+    font-size: 5vw;
+    bottom: 13vh;
+  }
+  nav {
+    position: sticky;
+  }
+  li {
+    float: none;
+  }
+  ul {
+    background-color: #333;
+  }
 }
