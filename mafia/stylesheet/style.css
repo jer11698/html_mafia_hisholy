@@ -2,6 +2,25 @@ body {
   font-family: 'Kanit', sans-serif !important;
 }
 
+.slideshow-container {
+  position: relative;
+}
+
+.slideshow-container .dis{
+  position: absolute;
+  left: 53vw;
+}
+
+.dis h1{
+  margin: 0;
+  font-size: 11vw;
+}
+
+.dis h2{
+  margin: 0;
+  font-size: 3vw;
+}
+
 nav {
   position: fixed;
   z-index: 1; 
@@ -38,69 +57,54 @@ li a:hover {
   display: flex;
 }
 
-.menu {
+.manu {
   height: 75vh;
 }
 
-.menu img{
+.manu img{
   width: 100%;
   opacity: 0.85;
   height: 75vh;
 }
 
-.menu h2 {
+.manu .sol {
   position: relative;
-  margin: 0 auto;
+}
+
+.sol h2 {
+  position: absolute;
+  /*margin: 0 auto;*/
   color: white;
-  max-width: fit-content;
+  /*max-width: fit-content;*/
   font-size: 5vw;
-  bottom: 49vh;
+  bottom: 20vh;
+}
+
+.sol:nth-child(1) h2{
+  left: 10vw;
+}
+
+.sol:nth-child(2) h2{
+  left: 10vw;
+}
+
+.sol:nth-child(3) h2{
+  left: 10vw;
+}
+
+.manu a{
+  text-decoration: none;
 }
 
 .col-1{
   width: 33.33%;
 }
 
-@media screen and (max-width:576px) {
-  .row {
-    display: block;
-  }
-  .col-1{
-    width: 100%;
-    height: 23vh;
-  }
-  .menu {
-    background-color: #636363;
-    height: auto;
-  }
-  .menu img{
-    width: 100%;
-    opacity: 0.85;
-    height: 23vh;
-  }
-  .menu h2 {
-    position: relative;
-    margin: 0 auto;
-    color: white;
-    max-width: fit-content;
-    font-size: 5vw;
-    bottom: 13vh;
-  }
-  nav {
-    position: sticky;
-  }
-  li {
-    float: none;
-  }
-  ul {
-    background-color: #333;
-  }
-}
-
-  .toggle,
+.toggle,
   [id^=drop] {
 	  display: none;
-  }
+}
+
 @media screen and (max-width : 768px) {
 	nav {
     margin: 0;
@@ -182,6 +186,7 @@ li a:hover {
 	nav ul ul ul li {
     position: static;
   }
+
   .row {
     display: block;
   }
@@ -189,16 +194,16 @@ li a:hover {
     width: 100%;
     height: 23vh;
   }
-  .menu {
+  .manu {
     background-color: #636363;
     height: auto;
   }
-  .menu img{
+  .manu img{
     width: 100%;
     opacity: 0.85;
     height: 23vh;
   }
-  .menu h2 {
+  .manu h2 {
     position: relative;
     margin: 0 auto;
     color: white;
@@ -224,38 +229,4 @@ li a:hover {
 		display:block;
 		width: 100%;
   }
-  .row {
-    display: block;
-  }
-  .col-1{
-    width: 100%;
-    height: 23vh;
-  }
-  .menu {
-    background-color: #636363;
-    height: auto;
-  }
-  .menu img{
-    width: 100%;
-    opacity: 0.85;
-    height: 23vh;
-  }
-  .menu h2 {
-    position: relative;
-    margin: 0 auto;
-    color: white;
-    max-width: fit-content;
-    font-size: 5vw;
-    bottom: 13vh;
-  }
-  nav {
-    position: sticky;
-  }
-  li {
-    float: none;
-  }
-  ul {
-    background-color: #333;
-  }
-
 }
