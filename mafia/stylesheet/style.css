@@ -9,6 +9,8 @@ body {
 .slideshow-container .dis{
   position: absolute;
   left: 53vw;
+  bottom: 27vh;
+  color: white;
 }
 
 .dis h1{
