@@ -49,6 +49,7 @@ li a {
   padding: 14px 37px;
   text-decoration: none;
   font-size: 2vw;
+  transition: linear 0.2s;
 }
 
 li a:hover {
@@ -67,6 +68,15 @@ li a:hover {
   width: 100%;
   opacity: 0.85;
   height: 75vh;
+  filter: brightness(0.5);
+  transition: linear 0.2s;
+}
+
+.manu img:hover{
+  width: 100%;
+  opacity: 0.85;
+  height: 75vh;
+  filter: brightness(.1);
 }
 
 .manu .sol {
@@ -87,7 +97,8 @@ li a:hover {
 }
 
 .sol:nth-child(2) h2{
-  left: 10vw;
+  left: 7vw;
+  font-size: 4.5vw;
 }
 
 .sol:nth-child(3) h2{
