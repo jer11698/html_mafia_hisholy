@@ -28,6 +28,7 @@ nav {
   z-index: 1; 
   top: 0;
   width: 100%;
+  transition: linear 0.2s;
 }
 
 ul {
