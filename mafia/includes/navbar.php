@@ -6,6 +6,6 @@
     <li><a href="#">ข่าวสาร</a></li>
     <li><a href="#">กลุ่มมาเฟีย</a></li>
     <li><a href="history.php">ประวัติ</a></li>
-    <li><a href="index.php">หน้าแรก</a></li>
+    <li><a href="<?php echo BASE_URL?>">หน้าแรก</a></li>
   </ul>
 </nav>
