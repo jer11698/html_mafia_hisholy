@@ -23,6 +23,8 @@ body {
   font-size: 3vw;
 }
 
+/*navbar*/
+
 nav#nav {
   position: fixed;
   z-index: 1; 
@@ -35,26 +37,52 @@ ul.menu {
   list-style-type: none;
   margin: 0;
   padding: 0 64px;
-  overflow: hidden;
-  /*background-color: #333;*/
 }
 
 ul.menu li {
   float: right;
 }
 
-ul.menu li a {
+ul.menu li{
   display: block;
-  color: white;
+  
   text-align: center;
   padding: 14px 37px;
-  text-decoration: none;
+  
   font-size: 2vw;
   transition: linear 0.2s;
 }
 
-ul.menu li a:hover {
+ul.menu li a{
+  color: white;
+  text-decoration: none;
+}
+
+ul.menu li:hover {
   background-color: #717171;
+}
+
+.dropbox {
+  display: inline-block;
+  position: relative;
+}
+
+.dropbox .dropdown-content {
+  
+  position: absolute;
+  padding: 0;
+  right: 0;
+  list-style: none;
+  display: none;
+  margin-top: 14px;
+}
+
+.dropbox .dropdown-content li{
+  width: 100%;
+}
+
+.dropbox:hover .dropdown-content {
+  display: block;
 }
 
 .row {
