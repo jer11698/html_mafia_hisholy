@@ -1,0 +1,90 @@
+.dis-blog {
+  position: absolute;
+    left: 36vw;
+    bottom: 14vh;
+    color: white;
+}
+
+.dis-blog h1{
+  margin: 0;
+  font-size: 6vw;
+}
+
+.container-blog {
+  margin: 0px 50px;
+  display: flex;
+}
+
+.post {
+  width: 335px;
+  margin: 9px;
+  min-height: 320px;
+  float: left;
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  position: relative;
+}
+
+.post .post_image {
+  width: 100%;
+  height: 260px;
+}
+
+.col-blog {
+  width: 76%;
+}
+
+.col-index {
+  width: 24%;
+}
+
+.container-blog .col-blog a {
+  text-decoration: none;
+  color: black;
+}
+
+.container-blog .col-blog h3 {
+  text-align: center;
+}
+
+.container-blog .col-blog a div {
+  margin: 1em;
+}
+
+.container-blog .col-index a {
+  text-decoration: none;
+  color: black;
+}
+
+.container-blog .col-index h3 {
+  text-align: center;
+}
+
+/*login and register*/
+
+.content-login {
+  position: relative;
+  background: white;
+  max-width: 30vw;
+  margin: 0 auto;
+  top: 15vh;
+  padding: 6px;
+}
+
+.content-login h2 {
+  text-align: center;
+}
+
+.content-login div {
+  margin: 25px;
+}
+
+.content-login .text-input {
+  width: 100%;
+  height: 32px;
+  padding: 0 16px;
+}
+
+.content-login p {
+  text-align: center;
+}
