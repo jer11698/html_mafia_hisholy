@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 function dd($value) // to be deteted
 
 {
