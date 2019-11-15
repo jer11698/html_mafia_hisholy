@@ -1,6 +1,13 @@
 <?php require_once('../config.php');
 include(ROOT_PATH . '/database/posts.php');
 ?>
+
+<?php 
+	if (isset($_GET['post-slug'])) {
+        $post = getPost($_GET['post-slug']);
+	}
+?>
+
 <?php include ROOT_PATH . '/includes/header.php'?>
 <title>Document</title>
 </head>
@@ -37,18 +44,12 @@ include(ROOT_PATH . '/database/posts.php');
   <div class="container-blog">
     <div class="col-blog">
       <div>
-        <h1>กลุ่มมาเฟียแต่ละกลุ่ม</h1>
+      <h1><?php echo $post['title']; ?></h1>
       </div>
       <hr>
       <div>
-        <?php foreach ($posts as $key => $post) :?>
-          <div class="post">
-          <img src="<?php echo BASE_URL . 'static/img/' . $post['image'] ?>" class="post_image">
-          <a href="post.php?post-slug=<?php echo $post['slug']; ?>">
-          <h3><?php echo $post['title'] ?></h3>
-          </a>
-        </div>
-        <?php endforeach; ?>
+      <img src="<?php echo BASE_URL . 'static/img/' . $post['image'];?>" style="width: 40%;">
+      <?php echo html_entity_decode($post['body']); ?>
       </div>
     </div>
     <div class="col-index">
@@ -59,7 +60,7 @@ include(ROOT_PATH . '/database/posts.php');
       <ul>
         <li><a href="<?php echo BASE_URL . 'info-mafia' ?>">ทั้งหมด</a></li>
         <?php foreach ($topics as $key => $topic):?>
-          <li><a href="<?php echo BASE_URL . 'info-mafia/filter.php' ?>"><?php echo $topic['name']; ?></a></li>
+          <li><a href="<?php echo BASE_URL . 'filter.php'?>"><?php echo $topic['name']; ?></a></li>
         <?php endforeach; ?>
       </ul>
     </div>

@@ -1,0 +1,111 @@
+* {
+  /* So 100% means 100% */
+  box-sizing: border-box;
+}
+
+html, body {
+  /* Make the body to be as tall as browser window */
+  height: 100%;
+}
+
+nav#nav {
+  display: flow-root;
+  position: sticky;
+}
+
+.wraper-dashboard {
+  display: flex;
+}
+
+.wraper-dashboard .left-sidebar {
+  flex: 2;
+  height: 100%;
+  background: #505050;
+  /*position: fixed;*/
+}
+
+.wraper-dashboard .left-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.wraper-dashboard .left-sidebar ul a {
+  padding: 10px;
+  display: block; 
+  color: white;
+  text-decoration: none;
+}
+
+.wraper-dashboard .left-sidebar ul a:hover {
+  background: #717171;
+}
+
+.wraper-dashboard .content-dashboard {
+  flex: 8;
+  height: 100%;
+  padding: 40px 63px 0 63px;
+}
+
+.wraper-dashboard .content-dashboard .content {
+  margin: 0 100px;
+}
+
+.wraper-dashboard .content-dashboard .buttom-group a ,.content div button{
+  color: white;
+  text-decoration: none;
+  background: #505050;
+  padding: 9px;
+  border-radius: 5%;
+}
+
+.content div button {
+  cursor: pointer;
+}
+
+.wraper-dashboard .content-dashboard .content .page-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.edit {
+  color: green;
+}
+
+.delete {
+  color: red;
+}
+
+.publish {
+  color: blue;
+}
+
+.edit, .delete, .publish {
+  text-decoration: none;
+}
+
+.edit:hover, .delete:hover, .publish:hover {
+  text-decoration: underline;
+}
+
+.content button {
+  background: none;
+  border: none;
+}
+
+.content div {
+  margin-bottom: 1.5rem;
+}

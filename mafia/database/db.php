@@ -1,6 +1,9 @@
 <?php
 
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
 
 function dd($value) // to be deteted
 
@@ -77,7 +80,7 @@ function create($table, $data)
     // $sql = "INSERT INTO users (username, admin, email, password) VALUES (?, ?, ?, ?)";
     // $sql = "INSERT INTO users SET username=?, admin=?, email=?, password=?"
 
-    $sql = "INSERT INTO $table SET ";
+    $sql = "INSERT INTO $table SET";
     $i = 0;
     foreach ($data as $key => $value) {
         if ($i === 0) {
@@ -87,6 +90,8 @@ function create($table, $data)
         }
         $i++;
     }
+
+    //dd($sql);
 
     $stmt = executeQuery($sql, $data);
     $id = $stmt->insert_id;
@@ -100,7 +105,7 @@ function update($table, $id, $data)
     // $sql = "UPDATE users (username, admin, email, password) VALUES (?, ?, ?, ?) WHERE id=?";
     // $sql = "UPDATE users SET username=?, admin=?, email=?, password=? WHERE id=?"
 
-    $sql = "UPDATE $table SET ";
+    $sql = "UPDATE $table SET";
     $i = 0;
     foreach ($data as $key => $value) {
         if ($i === 0) {
@@ -112,11 +117,40 @@ function update($table, $id, $data)
     }
 
     $sql = $sql . " WHERE id=?";
+
+    //dd($sql);
     $data['id'] = $id;
     $stmt = executeQuery($sql, $data);
     return $stmt->affected_rows;
 
 }
+
+function delete($table, $id){
+    global $conn;
+    //DELETE FROM table_name WHERE condition;
+    $sql = "DELETE FROM $table WHERE id=?";
+    //dd($sql);
+    $stmt = executeQuery($sql, ['id' => $id]);
+    return $stmt->affected_rows;
+    
+}
+
+function getPost($slug){
+	global $conn;
+	// Get single post slug
+	$post_slug = $_GET['post-slug'];
+    $sql = "SELECT * FROM posts WHERE slug=? AND published=?";
+    $stmt = executeQuery($sql, ['slug' => $post_slug, 'published' => 1]);
+    $records = $stmt->get_result()->fetch_assoc();
+    return $records;
+}
+
+/*function getPublishedPostsByTopic($topic_id) {
+    global $conn;
+    $stmt = selectAll('posts', ['topic_id' => $topic_id]);
+    $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    return $records;
+}*/
 
 $data = [
     'username' => 'Tester_GuyBoi',

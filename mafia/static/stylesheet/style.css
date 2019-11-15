@@ -1,5 +1,6 @@
 body {
   font-family: 'Kanit', sans-serif !important;
+  margin: 0;
 }
 
 .slideshow-container {
@@ -79,6 +80,7 @@ ul.menu li:hover {
 
 .dropbox .dropdown-content li{
   width: 100%;
+  background: #505050;
 }
 
 .dropbox:hover .dropdown-content {
