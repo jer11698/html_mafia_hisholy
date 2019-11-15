@@ -3,22 +3,3 @@ html.text {
   background-repeat: no-repeat;
   background-position: fixed;
 }
-h2{
-  color: white;
-}
-.grid-container {
-  margin-top: 7em;
-  display: flex;
-  flex-flow: row wrap-reverse;
-  justify-content: space-around;
-}
-img
-{
-  display: inline-block;
-
-}img:hover
-    {
-      -moz-box-shadow: 0 0 10px rgb(255, 255, 255);
-      -webkit-box-shadow: 0 0 10px rgb(255, 255, 255);
-      box-shadow: 0 0 10px rgb(255, 255, 255);
-    }
