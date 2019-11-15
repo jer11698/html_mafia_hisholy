@@ -1,4 +1,5 @@
-<?php require_once('config.php')?>
+<?php require_once('config.php');?>
+
 <?php include ROOT_PATH . '/includes/header.php'?>
 <title>Document</title>
 </head>
